@@ -4,7 +4,7 @@ from robocorp.tasks import task
 
 
 @task
-def minimal_task():
+def default_task():
     browser = Selenium()
 
     options = webdriver.FirefoxOptions()

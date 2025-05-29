@@ -17,3 +17,4 @@ testrun/*
 *.pkl
 *.log
 .venv/
+__pycache__

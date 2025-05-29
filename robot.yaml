@@ -2,8 +2,16 @@
 # https://github.com/robocorp/rcc/blob/master/docs/recipes.md#what-is-in-robotyaml
 
 tasks:
-  Run Task:
-    shell: uv run -m robocorp.tasks run automation/tasks.py
+  example:
+    shell: uv run -m robocorp.tasks run automation/example_task.py
+  consumer:
+    shell: uv run -m robocorp.tasks run automation/consumer_task.py
+  producer:
+    shell: uv run -m robocorp.tasks run automation/produce_task.py
+
+  # just the open command
+  log: 
+    shell: xdg-open output/log.html 
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
