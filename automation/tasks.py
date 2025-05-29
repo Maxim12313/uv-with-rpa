@@ -9,7 +9,7 @@ def minimal_task():
 
     options = webdriver.FirefoxOptions()
     options.add_argument("--private")
-    browser.open_available_browser("", options=options)
+    browser.open_available_browser("https://www.google.com", options=options)
     browser.maximize_browser_window()
 
     browser.input_text("name=q", "hello world")

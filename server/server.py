@@ -4,6 +4,7 @@ app = flask.Flask(__name__)
 
 # ------------ GLOBALS
 
+# bad practice? :D
 result_data = []
 
 # ------------ ROUTES

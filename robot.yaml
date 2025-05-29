@@ -3,7 +3,7 @@
 
 tasks:
   Run Task:
-    shell: uv run -m robocorp.tasks run tasks.py
+    shell: uv run -m robocorp.tasks run automation/tasks.py
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml
