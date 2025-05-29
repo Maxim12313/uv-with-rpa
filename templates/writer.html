@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style>
+      .down {
+        width: 300px;
+        flex-direction: column;
+        display: flex;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const form_data = new FormData(form);
+          fetch(form.action, {
+            method: "POST",
+            body: form_data,
+          });
+        });
+        console.log("DOM is fully loaded");
+      });
+    </script>
+  </head>
+
+  <body>
+    <form method="post" action="/writer_submit" class="down" id="form">
+      <label for="name">name</label>
+      <input type="text" name="name" placeholder="name" />
+
+      <label for="age">age</label>
+      <input type="text" name="age" placeholder="age" />
+
+      <label for="is_cool">is_cool</label>
+      <input type="text" name="is_cool" placeholder="is_cool" />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
