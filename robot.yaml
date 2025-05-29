@@ -7,7 +7,9 @@ tasks:
   consumer:
     shell: uv run -m robocorp.tasks run automation/consumer_task.py
   producer:
-    shell: uv run -m robocorp.tasks run automation/produce_task.py
+    shell: uv run -m robocorp.tasks run automation/producer_task.py
+  verifier:
+    shell: uv run -m robocorp.tasks run automation/verifier_task.py
 
   # just the open command
   log: 

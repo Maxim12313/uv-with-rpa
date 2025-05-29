@@ -5,5 +5,5 @@ from robocorp.tasks import task
 
 @task
 def consume():
-    browser = connect_default(URL + "/writer")
+    browser = connect_default(URL + "/results")
     browser.close_window()
