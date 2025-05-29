@@ -1,0 +1,7 @@
+# Notes 1
+- Turns out the conda.yaml file is optional. Just delete it from config and it won't try to rebuild envrionment on its own
+- Can more efficiently setup the environment by using uv, avoiding minimamba install and pip 
+- minimamba was the major time killer
+- To make robocorp use uv, we define in robot.yaml our task shell execution as 'uv run robocorp.tasks run \<task_file_name\>'
+- Flow: define uv.lock, build envrionment, source environment, change robot.yaml, run the robot
+

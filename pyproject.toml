@@ -1,0 +1,10 @@
+[project]
+name = "robo-to-uv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "robocorp>=3.0.0",
+    "rpaframework>=30.0.2",
+]
