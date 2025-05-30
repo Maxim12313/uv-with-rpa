@@ -5,3 +5,11 @@
 - To make robocorp use uv, we define in robot.yaml our task shell execution as 'uv run robocorp.tasks run \<task_file_name\>'
 - Flow: define uv.lock, build envrionment, source environment, change robot.yaml, run the robot
 
+# Notes 2
+- For local development and interacting with control room, we need to designate environment variables:
+```
+RC_WORKITEM_ADAPTER="FileAdapter"
+RC_WORKITEM_INPUT_PATH="wherever"
+RC_WORKITEM_OUTPUT_PATH="wherever"
+```
+- We can load this from a .env file or with os module

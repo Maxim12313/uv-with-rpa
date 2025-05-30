@@ -1406,6 +1406,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "flask" },
+    { name = "python-dotenv" },
     { name = "robocorp" },
     { name = "rpaframework" },
 ]
@@ -1413,6 +1414,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "flask", specifier = ">=3.1.1" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
     { name = "robocorp", specifier = ">=3.0.0" },
     { name = "rpaframework", specifier = ">=30.0.2" },
 ]

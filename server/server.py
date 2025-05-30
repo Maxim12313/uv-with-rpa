@@ -43,15 +43,13 @@ def results():
 @app.route("/writer_submit", methods=["POST"])
 def writer_submit():
     name = flask.request.form["name"]
-    age = flask.request.form["age"]
-    is_cool = flask.request.form["is_cool"]
+    power_level = flask.request.form["power_level"]
 
     try:
-        name, age, is_cool = try_parse(name, age, is_cool)
+        name, power_level = try_parse(name, power_level)
     except Exception:
         return flask.jsonify({"error": "invalid fields"}), 400
 
-    power_level = 2 * age if not is_cool else age * age
     global result_data
     result_data.append({"name": name, "power_level": power_level})
 
@@ -61,5 +59,5 @@ def writer_submit():
 # ------------ UTILS
 
 
-def try_parse(name, age, is_cool):
-    return str(name), int(age), bool(is_cool)
+def try_parse(name, power_level):
+    return str(name), int(power_level)
